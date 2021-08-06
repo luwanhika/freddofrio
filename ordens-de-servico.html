@@ -15,52 +15,216 @@
 
 </head>
 <body>
-  <main class="container_form">
-    <h1 class="title_order">Ordens de serviço</h1>
-    <div class="row">
-      <div class="inputbox">
-        <input type="text" id="nome" required>
-        <label for="nome">Nome</label>
+  <h1 class="title_order">Ordens de serviço</h1>
+
+  <form class="container_form">
+    
+    <fieldset>
+      <legend>cliente</legend>
+
+      <div class="row_first">
+        <div class="inputbox">
+          <label for="cliente">Número<span>*</span></label><br>
+          <input type="number" id="cliente" placeholder="1" required>
+        </div>
+        <div class="inputbox">
+          <label for="endereco">Cliente<span>*</span></label><br>
+          <select id="buscar">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </div>
+        <div class="inputbox">
+          <label for="endereco">Situação<span>*</span></label><br>
+          <select id="situacao">
+            <option value="aberto">Em aberto</option>
+            <option value="andamento">Em andamento</option>
+            <option value="concretizada">Concretizada</option>
+            <option value="cancelada">Cancelada</option>
+          </select>
+        </div>
       </div>
-      <div class="inputbox">
-        <input type="text" id="email" required>
-        <label for="email">E-mail</label>
+
+      <div class="row_first">
+        <div class="inputbox">
+          <label for="cel">Telefone*</label><br>
+          <input type="number" id="cel" placeholder="(99) 9999-9999" required>
+        </div>
+        <div class="inputbox">
+          <label for="cnpj">Cnpj*</label><br>
+          <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="inputbox">
-        <input type="text" id="cep" required>
-        <label for="cep">CEP</label>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Responsáveis</legend>
+
+      <div class="row_res">
+        <div class="inputbox">
+          <label for="cliente">Vendedor</label><br>
+          <input type="text" id="cliente" placeholder="Ex: Freddofrio" required>
+        </div>
+        <div class="inputbox">
+          <label for="modelo">Técnico</label><br>
+          <input type="text" id="modelo" placeholder="Ex: Split" required>
+        </div>
       </div>
-      <div class="inputbox">
-        <input type="text" id="endereco" required>
-        <label for="endereco">Endereço</label>
+
+    </fieldset>
+
+    <fieldset class="cont">
+      <div class="col_equipamento">
+        <legend>Equipamentos</legend>
+        <div class="row_first">
+          <div class="inputbox">
+            <label for="modelo">Equipamento<span>*</span></label><br>
+            <input type="text" id="cliente" placeholder="" required>
+          </div>
+        </div>
+
+        <div class="row_first">
+          <div class="inputbox">
+            <h3>condições</h3>
+            <textarea name="condicoes" id="" cols="85" rows="8"></textarea>
+          </div>
+        </div>
+        <div class="row_first">
+          <div class="inputbox">
+            <h3>Acessórios</h3>
+            <textarea name="condicoes" id="" cols="85" rows="8"></textarea>
+          </div>
+        </div>
+        <div class="row_first">
+          <div class="inputbox">
+            <h3>Laudo técnico</h3>
+            <textarea name="condicoes" id="" cols="85" rows="8"></textarea>
+          </div>
+        </div>
+      </div><!--col_equipamento-->
+
+      <div class="col_marca">
+        <div class="row_first">
+          <div class="text_area">
+            <label for="modelo">Marca<span>*</span></label><br>
+            <input type="text" id="cliente" placeholder="" required>
+          </div>
+          <div class="text_area">
+            <label for="modelo">Modelo<span>*</span></label><br>
+            <input type="text" id="cliente" placeholder="" required>
+          </div>
+          <div class="text_area">
+            <label for="modelo">Série<span>*</span></label><br>
+            <input type="text" id="cliente" placeholder="" required>
+          </div>
+        </div>
+        <div class="text_area_1">
+          <h3>Defeitos</h3>
+          <textarea name="condicoes" id="" cols="85" rows="8"></textarea>
+        </div>
+        <div class="text_area_2">
+          <h3>Solução</h3>
+          <textarea name="condicoes" id="" cols="85" rows="8"></textarea>
+        </div>
+        <div class="text_area_3">
+          <h3>Termos de garantia</h3>
+          <textarea name="condicoes" id="" cols="85" rows="8"></textarea>
+        </div>
+      </div><!--col_marca-->
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Produtos / Peças</legend>
+      <div class="produtos_pecas">
+        <div class="inputbox">
+          <input type="text" id="cliente" placeholder="Produto" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Detalhes" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Quant." required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Valor" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Desconto" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Subtotal" required>
+        </div>
       </div>
-      <div class="inputbox">
-        <input type="text" id="numero" required>
-        <label for="numero">Número</label>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Serviços/Mão de obra</legend>
+      <div class="produtos_pecas">
+        <div class="inputbox">
+          <input type="text" id="cliente" placeholder="Serviço" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Detalhes" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Quantidade" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Valor" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Desconto" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" id="marca" placeholder="Subtotal" required>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="inputbox">
-        <input type="text" id="bairro" required>
-        <label for="bairro">Bairro</label>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Total</legend>
+      <div class="produtos_pecas">
+        <div class="inputbox">
+          <label for="modelo">Mão de obra<span>*</span></label><br>
+          <input type="number" id="cliente" placeholder="0,00" required>
+        </div>
+        <div class="inputbox">
+          <label for="modelo">Peças<span>*</span></label><br>
+          <input type="number" id="marca" placeholder="0,00" required>
+        </div>
+        <div class="inputbox">
+          <label for="modelo">Frete<span>*</span></label><br>
+          <input type="number" id="marca" placeholder="0,00" required>
+        </div>
+        <div class="inputbox">
+          <label for="modelo">Outros<span>*</span></label><br>
+          <input type="number" id="marca" placeholder="0,00" required>
+        </div>
+        <div class="inputbox">
+          <label for="modelo">Desconto<span>*</span></label><br>
+          <input type="number" id="marca" placeholder="0,00" required>
+        </div>
+        <div class="inputbox">
+          <label for="modelo">Total<span>*</span></label><br>
+          <input type="number" id="marca" placeholder="0,00" required>
+        </div>
       </div>
-      <div class="inputbox">
-        <input type="text" id="cidade" required>
-        <label for="cidade">Cidade</label>
-      </div>
-      <div class="inputbox">
-        <input type="text" id="estado" required>
-        <label for="estado">Estado</label>
-      </div>
-    </div>
-    <div class="row">
+
+    </fieldset>
+    
+    
+    <div class="row_button">
       <button>Salvar</button>
     </div>
-  </main>
-  <footer>
+  </form>
+  <!-- <footer>
     Freddofrio &#169 2021
-  </footer>
+  </footer> -->
 </body>
 </html>
